@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo',sans-serif;
+}
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.banner .box {
+    position: relative;
+    height: 100vh;
+}
+.banner .box:last-child {
+    background-color: yellow;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    position: relative;
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+header ul {
+    display: flex;
+}
+header ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+header ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: cadetblue;
+    letter-spacing: 1px;
+}
+header ul li a:hover {
+    color:red;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+.content h1 {
+    font-size: 50px;
+    color: seagreen;
+    padding-top: 100px;
+}
+.content p {
+    font-size: 2em;
+    color: lightslategray;
+    line-height: 1.3em;
+}
+.btn {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border:2px solid black;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.btn:hover {
+    background-color: black;
+    color: blanchedalmond;
+    letter-spacing: 2px;
+    transform: translateY(-30%);
+}
+.sci {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5px;
+    right: 60px;
+}
+.sci li {
+    list-style: none;
+    margin-left: 20px;
+}
+.sci li img {
+    max-width: 30px;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+}
+.images .imgbox {
+    position: relative;
+    width: 50%;
+    height: 50vh;
+    background-color: red;
+}
+.images .imgbox:nth-child(3){
+    width: 100%;
+}
+.images .imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:500px) {
+    body {
+        background-color: greenyellow;
+    }
+}
+@media (max-width:600px) {
+    .banner {
+        grid-template-columns: 1fr;
+    }
+    .header {
+        padding: 20px 40px;
+    }
+    .content {
+        padding: 40px;
+    }
+    .banner .box .content {
+        height: 70vh;
+    }
+    .banner .box .images {
+        height: 70vh;
+    }
+}
+
+@media (max-width:600px) {
+    .content h1 {
+        font-size: 4em;
+    }
+    .images .imgbox {
+        width: 100%;
+        height: 40vh;
+        background-color: black;
+    }
+}
